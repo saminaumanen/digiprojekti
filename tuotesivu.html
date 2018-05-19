@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tuotesivu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cantarell">
+</head>
+<body>
+  
+<div class= "container" id="navbar">
+    <h1>Musamaailma - Tuotesivu</h1>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="home.html">Etusivu</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sivut<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="galleria.html">Galleria</a></li>
+            <li><a href="tuotesivu.html">Tuotteet</a></li>
+            <li><a href="yhteys.html">Ota meihin yhteyttä</a></li>                                       
+          </ul>
+        </li>
+        </ul>  
+          
+        </div>
+
+<div class="container" id="tabcontainer">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Joywave</a></li>
+        <li><a data-toggle="tab" href="#menu2">The Black Keys</a></li>
+        <li><a data-toggle="tab" href="#menu3">The Heavy</a></li>
+        <li><a data-toggle="tab" href="#menu4">Other</a></li>
+    </ul>
+    
+    <div class="tab-content" >
+        <div id="home" class="tab-pane fade in active">
+            <h3>Joywave</h3>
+                <p>1.Joywave - How do you feel? <br>
+                2. Joywave - Content</p> 
+                <img src="CSS/Pictures/joywave1.jpg" alt="joywave1">
+                <img src="CSS/Pictures/joywave2.jpg" alt="joywave2">
+            </div>
+                
+    <div id="menu2" class="tab-pane fade">
+            <h3>The Blak Keys</h3>
+              <p>1. The black Keys - brothers<br>
+            2. The black Keys - Turn Blue</p>
+              <img src="CSS/Pictures/BROTHERS.jpg" alt="BROTHERS">
+              <img src="CSS/Pictures/turnblue.jpg" alt="turnblue">
+        </div>
+
+    <div id="menu3" class="tab-pane fade">
+             <h3>The Heavy</h3>
+              <p>1. The Heavy - Hurt and the merciless<br>
+            2. The Heavy - Curse me good</p>
+              <img src="CSS/Pictures/The-Heavy.jpg" alt="The-Heavy">
+              <img src="CSS/Pictures/curseme.jpg" alt="curseme">
+             </div>
+
+        <div id="menu4" class="tab-pane fade">
+            <h3>Other</h3>
+             <p>Tänne lisäämme kaikkea muuta</p>
+            </div>
+       </div>    
+      </div>
+<br>
+<br>
+
+<div class="container" id="ostoskoricontainer">
+<h3>Lisää tuotteita ostoskoriin</h3>
+    <div class = "row" >   
+        <div class="col-sm-6 form-group">    
+    Tilaajan nimi: <input class="form-control" input type="text" id="tilaajaid"><br>
+    Tuote:<select id="tuote" input class="form-control">
+            <option value="Joywave: How do you feel?">Joywave: How do you feel?</option>
+            <option value="Joywave: Content">Joywave: Content</option>
+            <option value="The Black Keys: Brothers">The Black Keys: Brothers</option>
+            <option value="The Black Keys: Turn Blue">The Black Keys: Turn Blue</option>
+            <option value="The Heavy: Hurt and the merciless">The Heavy: Hurt and the merciless</option>
+            <option value="The Heavy: Curse me good">The Heavy: Curse me good</option>
+          </select>
+          <br>
+    Määrä: <input class="form-control"input type="number" id="maara"><br>
+        
+    <button id="submitBtn" onClick="submitClick()">Lisää ostoskoriin</button>
+    </form>
+    </div>
+    
+    <div class="col-sm-6 form-group">
+        <h3>Ostoskori</h3>
+        <div id="ostoskori"></div>
+    </div>
+    
+    
+    </div>
+
+
+</div>
+
+
+
+
+<script type='text/javascript' src='JS/ostoskori.js'></script>
+        
+    </body>
+    </html>        

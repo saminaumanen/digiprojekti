@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yhteyshenkilöt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>    
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+</head>
+<body>
+ 
+<!--navigointipalkki-->   
+<div class= "container" id="navbar">
+    <h1>Musamaailma - Ota meihin yhteyttä</h1>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="home.html">Etusivu</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sivut<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="galleria.html">Galleria</a></li>
+            <li><a href="tuotesivu.html">Tuotteet</a></li>
+            <li><a href="yhteys.html">Ota meihin yhteyttä</a></li>
+                                                   
+          </ul>
+        </li>
+        </ul>    
+        </div>
+
+        <div class="container">
+            <h2>Yhteyshenkilöt</h2>
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Pääkaupunkiseudun toimipisteet</a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      <table> 
+                          <tr>
+                        <th>Toimipiste</th>
+                        <th>Yhteystieto</th>
+                        <th>Kaupunki</th>
+                      </tr>
+                      <tr>
+                        <td>Musamaailma hsl</td>
+                        <td>Mikko Mallikas</td>
+                        <td>00100 Helsinki</td>
+                      </tr>
+                      <tr>
+                        <td>Musamaailma espå</td>
+                        <td>Erkki Esimerkki</td>
+                        <td>02600 Espoo</td>
+                      </tr>
+                      <tr>
+                        <td>Musamaailma VNT</td>
+                        <td>Erkki Mallinimi</td>
+                        <td>985327 Vantaa</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Tampereen toimipiste</a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      <table> 
+                        <tr>
+                      <th>Toimipiste</th>
+                      <th>Yhteystieto</th>
+                      <th>Kaupunki</th>
+                    </tr>
+                    <tr>
+                      <td>Musamaailma TMPR</td>
+                      <td>Essi Esimerkki</td>
+                      <td>00101 Tampere 10</td>
+                    </tr>
+                  </table>
+                </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Turun toimipiste</a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <div class="panel-body">
+                        <table> 
+                                <tr>
+                              <th>Toimipiste</th>
+                              <th>Yhteystieto</th>
+                              <th>Kaupunki</th>
+                            </tr>
+                            <tr>
+                              <td>Musamaailma TRK</td>
+                              <td>Teuvo Turkulainen</td>
+                              <td>00827 Turku</td>
+                            </tr>
+                            <tr>
+                              <td>Musamaailma TRK</td>
+                              <td>Clark Kent</td>
+                              <td>958279 Turku</td>
+                            </tr>
+                          </table>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+
+<!-- viestit menevät yhteydenotot.html tiedostoon-->
+          <div class="container" id="yhteyslomake">
+            <h2>Ota meihin yhteyttä!</h2>
+            <div class="row test">
+              <div class="col-md-4">
+                <p><span class="glyphicon glyphicon-map-marker"></span>Helsinki, Finland</p>
+                <p><span class="glyphicon glyphicon-phone"></span>9358279879</p>
+                <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p> 
+              </div>
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                  </div>
+                </div>
+                <textarea class="form-control" id="text" name="comments" placeholder="Comment" rows="5"></textarea>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <button id="submitBtn" onClick="submitClick()">Lähetä</button>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+          
+          <script type='text/javascript' src='JS/yhteys.js'></script>  
+        </body>
+        </html>
