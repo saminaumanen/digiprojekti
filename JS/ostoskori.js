@@ -1,6 +1,6 @@
 //Firebase ostoskori
 var config = {
-    apiKey: "AIzaSyBI6kqE8jWNy5jdmYMDqFArEHcNKLc6dIc",
+    apiKey: "APIKEY",
     authDomain: "lopputehtava-76b3d.firebaseapp.com",
     databaseURL: "https://lopputehtava-76b3d.firebaseio.com",
     projectId: "lopputehtava-76b3d",

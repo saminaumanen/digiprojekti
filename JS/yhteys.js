@@ -1,6 +1,6 @@
 //palautelomake
 var config = {
-    apiKey: "AIzaSyApIMxnXztETwIx7aolYQKLwPXNxuaQImQ",
+    apiKey: "APIKEY",
     authDomain: "fir-harjoitus2.firebaseapp.com",
     databaseURL: "https://fir-harjoitus2.firebaseio.com",
     projectId: "fir-harjoitus2",
